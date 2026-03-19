@@ -91,6 +91,10 @@ CI/CD-ready output format
 | Testing          | pytest |
 
 ## 📂 Project Structure
+
+## 📂 Project Structure
+
+```
 AI_POWERED_CHATBOT/
 │
 ├── main_app.py                   # ← Entry point — run this
@@ -133,6 +137,7 @@ AI_POWERED_CHATBOT/
 ├── .env                          # API keys — never commit this file
 ├── requirements.txt
 └── README.md
+```
 
 ## 🚀 Quick Start
 Option A — No API key needed (rule-based)
