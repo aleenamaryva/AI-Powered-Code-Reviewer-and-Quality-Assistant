@@ -1,7 +1,7 @@
- AI-Powered Code Reviewer & Quality Assistant
+## AI-Powered Code Reviewer & Quality Assistant
 
  
- 📌 Overview
+## 📌 Overview
 AI-Powered Code Reviewer Pro combines static AST analysis with LLM intelligence to automate one of the most tedious parts of software development — writing documentation.
 Upload any .py file or point it at a folder, and the tool instantly:
 
@@ -12,7 +12,7 @@ Validates PEP 257 compliance and highlights violations
 Writes approved docstrings directly back to your source files
 
 
-✨ Features
+## ✨ Features
 🧠 AI Docstring Generator
 
 3 style formats — Google, NumPy, reST
@@ -43,7 +43,8 @@ Export full report as JSON or CSV
 CI/CD-ready output format
 
 
-🏗️ Architecture
+## 🏗️ Architecture
+```
 ┌─────────────────────────────────┐
 │     Streamlit UI  (main_app.py) │
 └────────────────┬────────────────┘
@@ -75,11 +76,21 @@ CI/CD-ready output format
     ┌────────────▼────────────┐
     │   Dashboard & Export    │  ← dashboard_ui/
     └─────────────────────────┘
+```
+## ⚙️ Tech Stack
 
-⚙️ Tech Stack
-LayerTechnologyFrontendStreamlitBackendPython 3.9+AST ParsingPython built-in ast moduleAI — CloudGroq API (llama3-8b-8192)AI — LocalOllama (mistral)VisualizationPlotly, MatplotlibData ProcessingPandasTestingpytest
+| Layer            | Technology |
+|------------------|-----------|
+| Frontend         | Streamlit |
+| Backend          | Python 3.9+ |
+| AST Parsing      | Python built-in `ast` |
+| AI (Cloud)       | Groq API (llama3-8b-8192) |
+| AI (Local)       | Ollama (mistral) |
+| Visualization    | Plotly, Matplotlib |
+| Data Processing  | Pandas |
+| Testing          | pytest |
 
-📂 Project Structure
+## 📂 Project Structure
 AI_POWERED_CHATBOT/
 │
 ├── main_app.py                   # ← Entry point — run this
@@ -123,7 +134,7 @@ AI_POWERED_CHATBOT/
 ├── requirements.txt
 └── README.md
 
-🚀 Quick Start
+## 🚀 Quick Start
 Option A — No API key needed (rule-based)
 bashgit clone https://github.com/your-username/AI_POWERED_CHATBOT.git
 cd AI_POWERED_CHATBOT
@@ -142,7 +153,7 @@ ollama serve
 Set in .env:
 envOLLAMA_HOST=http://localhost:11434
 
-🖥️ How to Use
+## 🖥️ How to Use
 StepAction1Open the app at http://localhost:85012Upload .py files or paste a folder path in the sidebar3Click ▶ Load & Analyse4Navigate pages using the View dropdown5Generate, edit, and save docstrings from 🔮 Docstring Reviewer6Export your coverage report from 📊 Dashboard → Export
 
 🌐 Deploy to Streamlit Cloud
@@ -160,11 +171,11 @@ Hit Deploy 🚀 — live in under 2 minutes
 Tip: Delete the pages/ folder before deploying to avoid unwanted Streamlit multi-page navigation.
 
 
-🧪 Running Tests
+## 🧪 Running Tests
 bash# Run the full test suite
 pytest tests/ -v
 
-# Run a specific module
+ Run a specific module
 pytest tests/test_parser.py -v
 pytest tests/test_coverage_reporter.py -v
 pytest tests/test_validation.py -v
@@ -181,14 +192,14 @@ CI/CD friendly — JSON/CSV exports plug into any pipeline
 Dark & light theme — easy on the eyes either way
 
 
-⚠️ Limitations
+## ⚠️ Limitations
 
 Supports Python only (.py files)
 LLM generation requires either an API key or local Ollama
 Folder path write-back needs local filesystem access — not available on Streamlit Cloud
 
 
-🔮 Future Scope
+## 🔮 Future Scope
 
 🌍 Multi-language support (JavaScript, TypeScript, Java)
 🤖 GitHub PR bot — auto-comment missing docstrings on pull requests
@@ -197,22 +208,22 @@ Folder path write-back needs local filesystem access — not available on Stream
 🧩 VS Code extension
 
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome!
 bash# 1. Fork the repo and clone it
 git clone https://github.com/your-username/AI_POWERED_CHATBOT.git
 
-# 2. Create a feature branch
+ 2. Create a feature branch
 git checkout -b feature/your-feature-name
 
-# 3. Make your changes and run tests
+3. Make your changes and run tests
 pytest tests/ -v
 
-# 4. Commit and push
+ 4. Commit and push
 git commit -m "feat: add your feature"
 git push origin feature/your-feature-name
 
-# 5. Open a Pull Request
+ 5. Open a Pull Request
 
 📜 License
 This project is licensed under the MIT License — see the LICENSE file for details.
